@@ -1,0 +1,1 @@
+jupyter-book build $(pwd) && ghp-import -n -p -f -c finance-analysis.datascienceschool.net $(pwd)/_build/html

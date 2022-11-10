@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index.ipynb
+options:
+  numbered: true
+chapters:
+  - file: ch01/01_00.ipynb
+    sections:
+      - file: ch01/01_01.ipynb
