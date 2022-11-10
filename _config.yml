@@ -10,6 +10,8 @@ author: 김도형
 execute:
   execute_notebooks: off
 
+exclude_patterns: [README.md]
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/datascienceschool/book_finance_analysis # Online location of your book
