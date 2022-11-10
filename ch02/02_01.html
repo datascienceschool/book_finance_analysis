@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1.1. 금융분석의 종류와 범위 &#8212; 데이터 사이언스 스쿨 - 금융분석 편</title>
+    <title>2.1. 주식 분석의 종류 &#8212; 데이터 사이언스 스쿨 - 금융분석 편</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -87,8 +87,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. 주식 분석의 소개" href="../ch02/02_00.html" />
-    <link rel="prev" title="1. 금융분석의 소개" href="01_00.html" />
+    <link rel="next" title="2.2. 기술적 분석의 소개" href="02_02.html" />
+    <link rel="prev" title="2. 주식 분석의 소개" href="02_00.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,45 +144,45 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="01_00.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch01/01_00.html">
    1. 금융분석의 소개
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch01/01_01.html">
+     1.1. 금융분석의 종류와 범위
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="02_00.html">
+   2. 주식 분석의 소개
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     1.1. 금융분석의 종류와 범위
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ch02/02_00.html">
-   2. 주식 분석의 소개
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ch02/02_01.html">
      2.1. 주식 분석의 종류
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch02/02_02.html">
+    <a class="reference internal" href="02_02.html">
      2.2. 기술적 분석의 소개
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch02/02_03.html">
+    <a class="reference internal" href="02_03.html">
      2.3. 재무기반 주식 분석의 소개
     </a>
    </li>
@@ -243,7 +243,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/datascienceschool/book_finance_analysis/main?urlpath=tree/./ch01/01_01.ipynb"
+        <a href="https://mybinder.org/v2/gh/datascienceschool/book_finance_analysis/main?urlpath=tree/./ch02/02_01.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +299,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/ch01/01_01.ipynb"
+        <a href="../_sources/ch02/02_01.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -348,7 +348,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>금융분석의 종류와 범위</h1>
+                <h1>주식 분석의 종류</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -361,32 +361,19 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><span class="section-number">1.1. </span>금융분석의 종류와 범위<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<p>금융분석은 주식, 채권, 파생상품 등의 가치를 추정하고 이러한 자산으로 구성된 포트폴리오를 만들며 관리하기 위한 분석활동을 말한다.</p>
+<h1><span class="section-number">2.1. </span>주식 분석의 종류<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p>주식분석에는 주식의 시장가격 데이터를 기반으로 하는 기술적 분석과 기업의 특성 및 재무제표를 기반으로 하는 재무기반 분석이 있다.</p>
 <ul class="simple">
 <li><p>주식 분석</p>
 <ul>
-<li><p>개별 주식의 가치를 알아내기 위한 분석</p></li>
+<li><p>기술적 분석</p></li>
+<li><p>재무기반 분석</p>
+<ul>
+<li><p>주가배수 분석</p></li>
+<li><p>자산기반 분석</p></li>
+<li><p>펀더멘털 분석</p></li>
 </ul>
 </li>
-<li><p>채권 분석</p>
-<ul>
-<li><p>채권의 가치를 알아내기 위한 분석</p></li>
-</ul>
-</li>
-<li><p>파생상품 분석</p>
-<ul>
-<li><p>주식이나 채권 등과 연동된 파생상품의 가치 및 헤지에 필요한 정보를 알아내기 위한 분석</p></li>
-</ul>
-</li>
-<li><p>자산가격모형 분석</p>
-<ul>
-<li><p>금융상품의 요구수익률을 알아내기 위한 분석</p></li>
-</ul>
-</li>
-<li><p>포트폴리오 분석</p>
-<ul>
-<li><p>복수의 금융상품으로 이루어진 포트폴리오를 구성하고 관리하기 위한 분석</p></li>
 </ul>
 </li>
 </ul>
@@ -405,7 +392,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ch01"
+            path: "./ch02"
         },
         predefinedOutput: true
     }
@@ -419,17 +406,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="01_00.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02_00.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>금융분석의 소개</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>주식 분석의 소개</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../ch02/02_00.html" title="next page">
+    <a class='right-next' id="next-link" href="02_02.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>주식 분석의 소개</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>기술적 분석의 소개</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
