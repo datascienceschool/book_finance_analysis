@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>재무기반 주식 분석의 소개 &#8212; 데이터 사이언스 스쿨 - 금융분석 편</title>
+    <title>재무기반 분석의 소개 &#8212; 데이터 사이언스 스쿨 - 금융분석 편</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -85,6 +85,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="기술적 분석의 소개" href="02_02.html" />
@@ -194,7 +196,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     재무기반 주식 분석의 소개
+     재무기반 분석의 소개
     </a>
    </li>
   </ul>
@@ -413,7 +415,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#irr-internal-rate-of-return">
-     내부수익률 (IRR: Internal Rate of Return)
+     내부수익률(IRR: Internal Rate of Return)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -432,7 +434,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>재무기반 주식 분석의 소개</h1>
+                <h1>재무기반 분석의 소개</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -486,7 +488,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#irr-internal-rate-of-return">
-     내부수익률 (IRR: Internal Rate of Return)
+     내부수익률(IRR: Internal Rate of Return)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -507,7 +509,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>재무기반 주식 분석의 소개<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1>재무기반 분석의 소개<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <p>재무기반 주식 분석은 기업의 상황과 실적을 나타내는 재무제표 데이터를 기반으로 기업의 가치를 평가하는 분석론이다. 많이 사용되는 것으로 다음과 같은 3가지 방법론이 있다.</p>
 <ul class="simple">
 <li><p>주가배수 비교 방법론 (price-multiple method)</p></li>
@@ -757,14 +759,157 @@ title="Print to PDF"
 </section>
 <section id="id7">
 <h2>자산기반 가치평가 방법론<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<p>자산기반 가치평가 방법론은 기업이 소유한 모든 자산(asset)의 시장가치(market value)를 개별적으로 추정하여 합산한 값을 기업의 가치라고 가정하는 방법이다. 재무제표 중 재무상태표(statement of financial position)에는 기업이 소유한 자산과 부채의 항목과 각 항목의 회계적 평가금액이 기록되어 있다. 재무상태표의 자산금액을 모두 합친 후 부채금액을 뺀 값을 순자산가치(net asset value) 또는 장부가치(book-value)라고 한다. 만약 재무상태표에 누락된 항목이 없고 모든 항목이 시장가치로 기록되어 있다면 기업의 장부가치와 시가총액은 일치해야 할 것이다. 즉 앞에서 이야기한 주가배수 중 PBR의 값이 1이 되어야 한다.</p>
+<p>하지만 현실에서는 특정한 자산항목이 재무상태표에 기록되지 않거나 현재 시장가치와 다른 값으로 기록되는 경우가 많다. 이는 회계원칙에 의한 것으로 신뢰성의 원칙(reliability principle)에 따르면 “회계처리와 보고는 신뢰할 수 있도록 객관적인 자료와 증거에 의하여 공정하게 처리”하여야 하기 때문이다. 따라서 시장가치를 평가하기 어려운 자산은 역사적 원가로 기록하거나 일반적이지 않은 무형자산은 누락할 수도 있다. 예를 들어 브랜드 가치, 경쟁기업이 가지지 못한 전문적인 생산기술의 가치, 기업의 종업원들이 가진 전문적 지식의 가치, 기업이 소유한 마케팅 네트워크의 가치, 유통 채널 등의 가치 등은 평가가 어렵고 평가 주체에 따라 크게 달라질 수 있다. 만약 이러한 항목의 시장가치를 올바르게 평가할 수 있다면 전체 기업의 가치를 다음과 같이 구할 수 있다.</p>
+<ol class="simple">
+<li><p>대차대조표에 나열된 자산 및 부채 항목 각각의 현재 시장가치 추정</p></li>
+<li><p>누락된 자산 및 부채 항목을 식별하고 이들 각각의 시장가치 추정</p></li>
+<li><p>자산 및 부채 항목을 모두 고려하여 기업의 전체 시장가치 계산</p></li>
+</ol>
+<p>이 방법은 주가배수방법처럼 타 기업과 비교하지 않고 해당 기업의 정보만을 사용하므로 기업의 절대적 가치를 평가할 수 있다는 장점이 있다. 하지만 다음과 같은 이유로 기업의 내부자나 해당 분야의 전문가가 아니면 실제로 수행하기가 아주 어렵다.</p>
+<ul class="simple">
+<li><p>기업이 소유한 자산의 세부적인 항목은 공시정보나 재무제표에 구체적으로 드러나지 않은 기업의 내부정보인 경우가 많기 때문에 내부인이 아니면 입수하기가 어렵다.</p></li>
+<li><p>거래시장이나 유동성이 없는 자산이나 무형자산의 경우 해당 분야의 가치평가 전문가가 아니면 시장가치를 구하기 어렵고 평가자에 따라 크게 달라질 수 있다.</p></li>
+<li><p>자산의 단순한 판매가격을 사용하는 경우 이러한 판매가격은 해당 회사에서의 실제 유용가치와 일치하지 않을 수 있다.</p></li>
+<li><p>개별적 자산의 가치가 아닌 그 자산들이 해당 회사에서 같이 사용될 때의 시너지 가치를 추정하기 어렵다.</p></li>
+</ul>
+<p>따라서 자산기반 가치평가 방법론은 일반인들이나 기업 외부의 애널리스트가 사용하기에는 너무 어렵고 평가자마다 크게 다른 값이 나올 수 있어 평가의 객관성을 확보하기도 힘들기 때문에 널리 사용되지 않고 있다.</p>
 </section>
 <section id="id8">
 <h2>펀더멘탈 분석 방법론<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<p>펀더멘탈 분석은 기업이 생성할 미래의 가치를 예측하고 이를 적정한 요구수익률(required rate of return)로 할인한 값을 기업의 가치라고 가정하는 방법이다. 이 방법은 고전적인 현금흐름할인법(cashflow discount method)을 기업가치 평가에 맞게 수정한 것이다. 따라서 펀더멘탈 분석의 원리를 이해하기 위해서는 일단 현금흐름할인법을 알아야 한다.</p>
 <section id="cashflow-discount-method">
 <h3>현금흐름할인법 (Cashflow Discount Method)<a class="headerlink" href="#cashflow-discount-method" title="Permalink to this headline">#</a></h3>
+<p>현금흐름할인법은 투자 후 미래에 받게 될 현금을 현재가치로 할인하여 투자의 가치를 구하는 방법이다. 투자되는 돈(나가는 돈)이나 투자 후 받는 돈(들어오는 돈)의 집합을 <b>현금흐름(cashflow)</b>라고 한다. 보통 나가는 돈은 음수로, 들어오는 돈은 양수로 표시한다.</p>
+<p>예를 들어 100만원을 투자한 후 1년마다 1만원을 받고 5년 후에는 101만원을 받으면서 종료되는 투자 A를 생각해보자. 투자 A의 현금흐름은 다음과 같다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>시점(년)</p></th>
+<th class="head"><p>현금흐름</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>-1,000,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>10,000</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>10,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>10,000</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>10,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>1,010,000</p></td>
+</tr>
+</tbody>
+</table>
+<p>그런데 1년 후에 받게 될 만원의 가치는 현재의 만원의 가치와 같지 않다. 지금 만원을 은행에 넣어둔다고 하면 1년 후에는 만원에 은행이 주는 이자가 더해져서 더 큰 금액이 될 것이므로 1년 후의 만원은 현재의 만원 보다 가치가 적다.</p>
+<div class="math notranslate nohighlight">
+\[
+\text{현재의 만원의 가치} &gt; \text{1년 후의 만원의 가치}
+\]</div>
+<p>만약 은행의 이자율이 1%이라고 가정하면 1년 후에 은행으로부터 만원을 받기 위해서 지금 은행에 넣어야 하는 돈은 다음과 같이 계산할 수 있다.  (원 이하 반올림 사용)</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{10,000}{1 + 0.01} = 9,901 
+\]</div>
+<p>즉, 지금 9,901원을 은행에 넣으면 1년 후에는 만원을 받게 된다.</p>
+<div class="math notranslate nohighlight">
+\[
+9,901 \times (1 + 0.01) = 10,000
+\]</div>
+<p>2년 후의 만원의 현재 가치는 연복리에 따라 다음과 같이 계산한다. 이를 <b>할인(discount)</b>한다고 한다.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{10,000}{(1 + 0.01)^2} = 9,803
+\]</div>
+<p>현금흐름할인법은 이러한 방식으로 미래 현금흐름을 할인하여 투자의 현재가치를 구하는 방법이다. 투자 A의 경우 현금흐름할인법에 따라 현재가치는 투자금액과 일치하는 100만원이 된다.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{10,000}{1 + 0.01} +\frac{10,000}{(1 + 0.01)^2} + \frac{10,000}{(1 + 0.01)^3} + \frac{10,000}{(1 + 0.01)^4} + \frac{1,010,000}{(1 + 0.01)^5} = 1,000,000
+\]</div>
+<p>따라서 투자 A는 위에서 제시한 현금흐름이 100% 확실하게 보장된다고 하더라도 은행에 저축하는 것에 비해 나은 점이 없다고 할 수 있다.</p>
+<p>이번에는 다음과 같은 현금흐름을 가지는 투자 B에 대해 투자의사결정을 해보자.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>시점(년)</p></th>
+<th class="head"><p>현금흐름</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>-1,000,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>5,000</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>15,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>5,000</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>15,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>1,000,000</p></td>
+</tr>
+</tbody>
+</table>
+<p>투자 B를 집행할지 안할지에 대한 의사결정을 하는 방법은 현금흐름할인법에 따라 은행 이자율로 미래의 현금흐름을 할인하여 현재가치를 계산하여 이 현재가치가 투자금액보다 크면 투자를 하고 현재가치가 투자금액보다 작으면 투자를 하지 않는 것이다.</p>
+<p>은행 이자율 1%로 투자 B의 현재가치를 구하면 990,388원이다.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{5,000}{1 + 0.01} +\frac{15,000}{(1 + 0.01)^2} + \frac{5,000}{(1 + 0.01)^3} + \frac{15,000}{(1 + 0.01)^4} + \frac{1,000,000}{(1 + 0.01)^5} = 990,388
+\]</div>
+<p>이는 은행을 이용할 경우 다음과 같이 100만원보다 적은 돈을 넣어서 투자 B와 동일한 미래 현금흐름을 만들어 낼 수 있음을 의미한다.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(4,950 \times (1 + 0.01) = 5,000\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(14,704 \times (1 + 0.01)^2 = 15,000\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(4,853 \times (1 + 0.01)^3 = 5,000\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(14,415 \times (1 + 0.01)^4 = 15,000\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(951,466 \times (1 + 0.01)^5 = 1,000,000\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( \text{합계} = 4,950 + 14,704 + 4,853 + 14,415 + 951,466 = 990,388 \)</span></p></li>
+</ul>
 </section>
 <section id="irr-internal-rate-of-return">
-<h3>내부수익률 (IRR: Internal Rate of Return)<a class="headerlink" href="#irr-internal-rate-of-return" title="Permalink to this headline">#</a></h3>
+<h3>내부수익률(IRR: Internal Rate of Return)<a class="headerlink" href="#irr-internal-rate-of-return" title="Permalink to this headline">#</a></h3>
+<p>다시 투자 A를 살펴보자. 은행이자율에 따라 투자 A의 현재가치를 구하면 투자금 100만원과 동일하다. 그러면 투자 A와 은행에 저축하는 행위는 동일한가? 만약 투자 A가 은행만큼 믿을 수 있다면 그렇다고 할 수 있다. 하지만 만약 투자 A가 현금흐름표에서 제시한 현금흐름을 실제로 실현하지 못할 가능성이 있다면 같은 돈을 은행에 넣지 아무도 투자 A에 넣지 않을 것이다. 그러면 우리는 언제 은행이 아닌 투자를 선택하는가? 투자에서 나오는 현금흐름의 현재가치가 투자금액보다 큰 경우다.</p>
+<p>예를 들어 다음과 같은 현금흐름을 가지는 투자 C를 살펴보자.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>시점(년)</p></th>
+<th class="head"><p>현금흐름</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>-1,000,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>10,000</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>20,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>30,000</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>40,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>1,050,000</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="rrr-required-rate-of-return">
 <h3>요구수익률 (RRR: Required Rate of Return)<a class="headerlink" href="#rrr-required-rate-of-return" title="Permalink to this headline">#</a></h3>
