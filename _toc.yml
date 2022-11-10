@@ -9,3 +9,8 @@ chapters:
   - file: ch01/01_00.ipynb
     sections:
       - file: ch01/01_01.ipynb
+  - file: ch02/02_00.ipynb
+    sections:
+      - file: ch02/02_01.ipynb
+      - file: ch02/02_02.ipynb
+      - file: ch02/02_03.ipynb
