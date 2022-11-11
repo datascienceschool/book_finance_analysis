@@ -415,7 +415,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#irr-internal-rate-of-return">
-     내부수익률(IRR: Internal Rate of Return)
+     내재수익률(IRR: Internal Rate of Return)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -493,7 +493,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#irr-internal-rate-of-return">
-     내부수익률(IRR: Internal Rate of Return)
+     내재수익률(IRR: Internal Rate of Return)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -890,7 +890,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="irr-internal-rate-of-return">
-<h3>내부수익률(IRR: Internal Rate of Return)<a class="headerlink" href="#irr-internal-rate-of-return" title="Permalink to this headline">#</a></h3>
+<h3>내재수익률(IRR: Internal Rate of Return)<a class="headerlink" href="#irr-internal-rate-of-return" title="Permalink to this headline">#</a></h3>
 <p>다음과 같은 현금흐름을 가지는 투자 C를 살펴보자.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -924,7 +924,7 @@ title="Print to PDF"
 \[
 \frac{10,000}{1 + 0.01} +\frac{20,000}{(1 + 0.01)^2} + \frac{30,000}{(1 + 0.01)^3} + \frac{40,000}{(1 + 0.01)^4} + \frac{1,050,000}{(1 + 0.01)^5} = 1,096,103
 \]</div>
-<p>따라서 투자 C는 은행 이자율 1%보다 더 수익률이 높다고 할 수 있다. 그러면 투자 C의 수익률 <span class="math notranslate nohighlight">\(x\)</span>를 숫자로 구하면 얼마일까? 은행 이자율이 아닌 수익률 <span class="math notranslate nohighlight">\(x\)</span>로 할인하였을 때 현재가치가 투자금액 100만원과 같아지는 할인 수익률 <span class="math notranslate nohighlight">\(x\)</span>를 찾아야 한다. 따라서 다음 방정식을 풀어 <span class="math notranslate nohighlight">\(x\)</span>를 구한다. 이렇게 구한 수익률을 투자의 <b>내부수익률(IRR: Internal Rate of Return)</b>이라고 한다.</p>
+<p>따라서 투자 C는 은행 이자율 1%보다 더 수익률이 높다고 할 수 있다. 그러면 투자 C의 수익률 <span class="math notranslate nohighlight">\(x\)</span>를 숫자로 구하면 얼마일까? 은행 이자율이 아닌 수익률 <span class="math notranslate nohighlight">\(x\)</span>로 할인하였을 때 현재가치가 투자금액 100만원과 같아지는 할인 수익률 <span class="math notranslate nohighlight">\(x\)</span>를 찾아야 한다. 따라서 다음 방정식을 풀어 <span class="math notranslate nohighlight">\(x\)</span>를 구한다. 이렇게 구한 수익률을 투자의 <b>내재수익률(IRR: Internal Rate of Return)</b>이라고 한다.</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{10,000}{1 + x} +\frac{20,000}{(1 + x)^2} + \frac{30,000}{(1 + x)^3} + \frac{40,000}{(1 + x)^4} + \frac{1,050,000}{(1 + x)^5} = 1,000,000
@@ -943,12 +943,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>numpy_financial 패키지의 <code class="docutils literal notranslate"><span class="pre">irr</span></code> 함수를 이용하면 투자 C의 내부수익률은 약 2.9%로 은행 이자율 1%보다 두 배 이상 높다는 것을 알 수 있다.</p>
+<p>numpy_financial 패키지의 <code class="docutils literal notranslate"><span class="pre">irr</span></code> 함수를 이용하면 투자 C의 내재수익률은 약 2.9%로 은행 이자율 1%보다 두 배 이상 높다는 것을 알 수 있다.</p>
 </section>
 <section id="rrr-required-rate-of-return">
 <h3>요구수익률 (RRR: Required Rate of Return)<a class="headerlink" href="#rrr-required-rate-of-return" title="Permalink to this headline">#</a></h3>
-<p>다시 투자 A를 살펴보자. 투자 A의 현재가치를 투자금 100만원과 동일하고 내부수익률은 은행 이자율과 같은 1%이다. 그런데 만약 투자 A에서 약속한 현금흐름이 나오지 않을 위험이 있다면 은행 이자율과 동일한 수익류로는 아무도 투자하지 않을 것이다. 하지만 투자 C처럼 은행 이자율보다 수익률이 훨씬 높다면 위험을 부담하고서라도 투자하고자 하는 사람이 있을 수 있다.</p>
-<p>어떤 위험한 투자가 있을 때 기준이 되는 수익률 값이 정해져 있어 이 기준값보다 투자의 내부수익률이 높으면 투자를 하고 이 기준값보다 투자의 내부수익률이 낮으면 투자를 하지 않는 기준값을 해당 투자의 <b>요구수익률(RRR: Required Rate of Return)</b>이라고 한다.</p>
+<p>다시 투자 A를 살펴보자. 투자 A의 현재가치를 투자금 100만원과 동일하고 내재수익률은 은행 이자율과 같은 1%이다. 그런데 만약 투자 A에서 약속한 현금흐름이 나오지 않을 위험이 있다면 은행 이자율과 동일한 수익류로는 아무도 투자하지 않을 것이다. 하지만 투자 C처럼 은행 이자율보다 수익률이 훨씬 높다면 위험을 부담하고서라도 투자하고자 하는 사람이 있을 수 있다.</p>
+<p>어떤 위험한 투자가 있을 때 기준이 되는 수익률 값이 정해져 있어 이 기준값보다 투자의 내재수익률이 높으면 투자를 하고 이 기준값보다 투자의 내재수익률이 낮으면 투자를 하지 않는 기준값을 해당 투자의 <b>요구수익률(RRR: Required Rate of Return)</b>이라고 한다.</p>
 <p>위험 투자의 요구수익률을 정하는 합리적인 방법은 다른 투자자들이 가진 요구수익률을 모방하는 것이다. 만약 자신의 가진 요구수익률이 다른 투자자들이 가진 요구수익률보다 너무 높으면 다른 투자자들이 하는 투자 기회를 놓칠 것이고 자신의 요구수익률이 다른 투자자들의 요구수익률보다 너무 낮으면 손실을 볼 수 있다. 특히 주식 투자의 경우에는 해당 주식에 투자하는 사람이 많아질수록 투자수익률이 높아지기 때문에 다른 투자자들의 의사결정 기준을 아는 것이 매우 중요하다.</p>
 </section>
 <section id="id9">
@@ -968,7 +968,6 @@ title="Print to PDF"
 = \dfrac{\text{1년후 생성될 가치}}{\text{1 + 요구수익률}}
 + \dfrac{\text{2년후 생성될 가치}}{\text{(1 + 요구수익률)}^2}
 + \dfrac{\text{3년후 생성될 가치}}{\text{(1 + 요구수익률)}^3}
-+ \dfrac{\text{4년후 생성될 가치}}{\text{(1 + 요구수익률)}^4}
 + \cdots
 \]</div>
 <p>특정 주식의 요구수익률은 <b>자산가격이론(asset price theory)</b>를 사용하여 구한다. 가장 기본적인 자산가격이론은 <b>CAPM(Capital Asset Pricing Model)모형</b>으로 개별주식과 시장전체의 수익률간 관계를 나타내는 <b>베타(beta)</b>라는 값을 사용한다. 자산가격이론에 대한 장에서 이에 대해 보다 자세한 내용을 공부할 것이다.</p>
