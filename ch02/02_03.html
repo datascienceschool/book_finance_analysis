@@ -931,9 +931,9 @@ title="Print to PDF"
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy_financial</span> <span class="k">as</span> <span class="nn">npf</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy_financial as npf
 
-<span class="n">npf</span><span class="o">.</span><span class="n">irr</span><span class="p">([</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">105</span><span class="p">])</span>
+npf.irr([-100, 1, 2, 3, 4, 105])
 </pre></div>
 </div>
 </div>
@@ -980,6 +980,15 @@ title="Print to PDF"
 <li><p>요구수익로 미래의 가치를 할인하여 기업의 현재가치를 구한다.</p></li>
 <li><p>현재가치와 현재 주가를 비교하여 매수/매도를 판단한다.</p></li>
 </ol>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>
+graph LR;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+    D--&gt;E;
+</pre></div>
+</div>
 </section>
 </section>
 </section>
